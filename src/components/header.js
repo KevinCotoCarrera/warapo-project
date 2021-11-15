@@ -1,42 +1,83 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React  from "react"
+import MyDrawer from "./my-drawer"
+import MyCarousel  from "./carousel"
+import MyEvents from "./events"
+import MyTopFive from "./topfive"
+import FinalSection from "./about"
+import './styles.sass'
+import {
+  Heading,
+  Button, 
+  Image,
+} from "@chakra-ui/react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+
+
+
+function Header() {
+ 
+   
+
+   
+
+    
+  
+ 
+
+
+
+  return (
+   <>
+    <div className="menu">
+    <MyDrawer/>
+
+
+      <Image
+        //width={['80px', '120px' , '150px']}
+        //height={['45px', '70px', '90px']}
+        //objectFit="fill"
+        //src={logo}
+        //alt="Warapo Project"
+        
+      />
+
+
+        <Button  
+        size='md' 
+        variant="outline"  
+        borderColor="black"
+        borderWidth="2px"
+        color= "white"
+        colorScheme="facebook"
+        letterSpacing={['normal', 'wider' ,'widest']}
+        //color="#00ABC4"
+        _hover={{
+          opacity: '0.925',
+          color: '#00ABC4',
+          borderWidth: '3px',
+          boxShadow: "1px 1px 1px 1px black",
+          transitionDuration: "0.3s",
+          backgroundColor: "white"
       }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+        w={['80px', '120px' , '150px']}
+        fontSize={['16px', '18px' , '20px']}
+        borderRadius="sm"
+        height={['36px', '40px']}
+        >RESERVA
+        </Button>
+        
+  </div>
+  <Heading as="h1" className="heroText" size="2xl" left={['28px', '50px', '80px', '100px']}>Recuerda tienes una sola vida.  <br></br>Vivela. <br></br>John Pollen</Heading>
+  <MyCarousel/>
+  <MyEvents/>
+  <MyTopFive/>
+  <FinalSection/>
+      
+ </>
+  )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
+    
+ 
+  };
 
 export default Header

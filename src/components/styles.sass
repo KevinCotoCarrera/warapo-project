@@ -1,0 +1,117 @@
+$primary : rgb(81, 196, 211),
+$secondary: #00ABC4
+$black: rgb(19, 44, 51),
+$white: #feeedc,
+$old: #cfa796,
+
+html
+    color:$white,
+
+
+    .heroText
+        position: absolute
+        top: 300px
+        
+        z-index: 2
+        color: $white
+        
+        text-justify: left
+
+   
+    
+    #bgImg
+       
+        width: 100%
+        height: 350px
+        background-size: cover
+    .menu
+        
+        display: flex
+        justify-content: space-between
+        padding-top: 24px
+        padding-left: 0px
+        padding-right: 25px
+        align-items: center
+        
+        position: absolute
+        z-index: 2
+        width: 100%
+    #nav-d
+        padding: 0px 0px 0px 0px
+        width: 100%
+        font-size: 1.5rem,
+        display: flex,
+        list-style: none
+        flex-direction: column
+
+        text-decoration: none
+
+    .items-nav-d
+        display: flex
+        padding: 0px 0px 0px 0px
+        width: 100%
+        color: white
+        height: 60px
+        font-size: 15px
+        text-decoration: none
+        align-items: center
+    .links-nav
+        color: white
+        padding-left: 24px 
+        text-decoration: none
+        &:hover
+            color: $black
+            text-decoration: underline
+            transition: 0.5s
+
+    .nav-b
+
+        font-size: 1.5rem,
+        display: flex,
+        list-style: none
+        justify-content: center
+        column-gap: 40px
+    .chakra-modal__header
+        color: $white
+    img
+        margin-bottom: 0px     
+   
+
+        
+        
+    @keyframes example
+        0%
+            filter: greyscale(5%)
+            opacity: 0.825
+        20%
+            filter: greyscale(25%)
+            opacity: 0.85
+        40%
+            filter: greyscale(50%)
+            opacity: 0.9
+        60%
+            filter: greyscale(65%)
+            opacity: 0.95
+        80%
+            filter: greyscale(80%)
+             opacity: 0.9825
+        100%
+            filter: greyscale(100%)
+            opacity: 1
+    .active
+        animation: example
+        animation-duration: 0.8s
+    .horizontal-scroll-wrapper
+        .feature-card
+            margin-top: 36px
+            margin-right: 16px
+            margin-left: 16px
+@media ( min-width: 1000px)
+    .feature-card
+        margin-right: 132px
+        margin-left: 132px
+                
+    .SocialFinal
+        max-height:  10px      
+           
+               
