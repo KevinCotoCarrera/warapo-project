@@ -29,7 +29,7 @@ function MyTopFive(){
         <Heading as="h2" size="2xl" color='blue.100' >Top Artistas</Heading>
    </HStack>
     <HStack 
-    mt={-8}
+    mt={-14}
     mb={8}
     flexDirection='row'
     justifyContent="space-evenly" 
@@ -94,6 +94,7 @@ function MyTopFive(){
             boxShadow="dark-lg" 
             boxSize={['65px' , '75px', '100px']}
             mb={4}
+            mt={6}
             ml="8px"
             _hover={{
                 borderColor: '#00ABC4',
