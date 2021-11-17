@@ -84,6 +84,8 @@ function MyTopFive(){
  function TopArtists ({img, name}){
     return(
         <HStack flexDirection="column"
+        wrap="wrap"
+        
         _hover={{
             color: '#00ABC4',
             transition: '1s'
@@ -92,17 +94,17 @@ function MyTopFive(){
             borderRadius="full" borderWidth="4px" borderColor="white"
             backgroundImage={img} backgroundSize="cover" 
             boxShadow="dark-lg" 
-            boxSize={['65px' , '75px', '100px']}
+            boxSize={['100px' , '120px', '150px']}
             mb={4}
             mt={6}
-            ml="8px"
+            //ml="8px"
             _hover={{
                 borderColor: '#00ABC4',
                 transition: '1s',
             }} 
             >
             </Box>
-            <Text 
+            <Text
             textAlign="center"
             fontSize="xl"
             
