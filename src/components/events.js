@@ -42,9 +42,9 @@ function Feature({title, img, icon, alt, desc, link, ...rest}){
         ></Image>
         <Heading fontSize="xl" as="h3" mt={2} p={4}>{title}</Heading>
         <Text  mb={4}  pl={4} pr={4}>{desc}</Text>
-        <Link  pl={4}   href={link}
+        <Link  pl={4}   href="https://wa.me/5352637564"
             >
-          
+                
                 <Button
                 mb={2}
                 size='md' 

@@ -50,7 +50,7 @@ function MyDrawer(){
           <ListItem  className="items-nav-d" bgGradient="linear(to-r, blue.400, blue.500 )" ><a onClick={onClose} href="#header" className="links-nav">Inicio</a></ListItem>
           <ListItem onClick={onClose} className="items-nav-d" bgGradient="linear(to-r, blue.500, purple.600 )" ><a href="#events" className="links-nav">Eventos</a></ListItem>
           <ListItem onClick={onClose} className="items-nav-d" bgGradient="linear(to-r,purple.600, green.700 )" ><a href="#musica" className="links-nav">Música</a></ListItem>
-          <ListItem onClick={onClose} className="items-nav-d" bgGradient="linear(to-r,green.600, pink.700 )" ><a href="#" className="links-nav">Reserva</a></ListItem>
+          <ListItem onClick={onClose} className="items-nav-d" bgGradient="linear(to-r,green.600, pink.700 )" ><a href="https://wa.me/5352637564" className="links-nav">Reserva</a></ListItem>
         </List>
      
             

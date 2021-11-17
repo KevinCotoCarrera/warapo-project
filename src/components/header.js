@@ -11,6 +11,7 @@ import {
   Heading,
   Button, 
   Image,
+  Link,
 } from "@chakra-ui/react"
 
 
@@ -43,7 +44,7 @@ function Header() {
         
       />
 
-
+      <Link href="https://wa.me/5352637564">
         <Button  
         size='md' 
         variant="outline"  
@@ -67,6 +68,7 @@ function Header() {
         height={['36px', '40px']}
         >RESERVA
         </Button>
+        </Link>
         
   </div>
   <Heading as="h1" className="heroText" size="2xl" lineHeight="normal" left={['28px', '50px', '80px', '100px']}>Las mejores noches de Cuba,<br></br>Vívelo en:<br></br><span style={{lineHeight: '50px'}} id="events">Warapo</span></Heading>

@@ -22,7 +22,7 @@ function FinalSection(){
             <ul style={{display: 'flex', flexDirection: 'column' , justifyContent:'space-evenly', height: '100%' , marginBottom: '0px', paddingBottom: '10px'}}>
                 <a style={{color : 'white', textDecorationLine: 'none', fontSize: '16px'}} href="#events">Eventos</a>
                 <a style={{ color : 'white',textDecorationLine: 'none', fontSize: '16px'}} href="#musica">Top Music</a>
-                <a style={{ color : 'white',textDecorationLine: 'none', fontSize: '16px'}} href="">Reserva</a>
+                <a style={{ color : 'white',textDecorationLine: 'none', fontSize: '16px'}} href="https://wa.me/5352637564">Reserva</a>
 
             </ul>
         </Box>
