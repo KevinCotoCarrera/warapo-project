@@ -1,9 +1,11 @@
 import React  from "react"
+import logo from "./../images/logo-simple.png"
 import MyDrawer from "./my-drawer"
 import MyCarousel  from "./carousel"
 import MyEvents from "./events"
 import MyTopFive from "./topfive"
 import FinalSection from "./about"
+
 import './styles.sass'
 import {
   Heading,
@@ -33,11 +35,11 @@ function Header() {
 
 
       <Image
-        //width={['80px', '120px' , '150px']}
-        //height={['45px', '70px', '90px']}
-        //objectFit="fill"
-        //src={logo}
-        //alt="Warapo Project"
+        width={['120px', '150px' , '180px']}
+        height={['120px', '150px', '180px']}
+        objectFit="fill"
+        src={logo}
+        alt="Warapo Project Logo"
         
       />
 
@@ -45,8 +47,8 @@ function Header() {
         <Button  
         size='md' 
         variant="outline"  
-        borderColor="black"
-        borderWidth="2px"
+        borderColor="white"
+        borderWidth="1px"
         color= "white"
         colorScheme="facebook"
         letterSpacing={['normal', 'wider' ,'widest']}
@@ -54,7 +56,7 @@ function Header() {
         _hover={{
           opacity: '0.925',
           color: '#00ABC4',
-          borderWidth: '3px',
+          borderWidth: '1px',
           boxShadow: "1px 1px 1px 1px black",
           transitionDuration: "0.3s",
           backgroundColor: "white"
@@ -67,7 +69,7 @@ function Header() {
         </Button>
         
   </div>
-  <Heading as="h1" className="heroText" size="2xl" left={['28px', '50px', '80px', '100px']}>Recuerda tienes una sola vida.  <br></br>Vivela. <br></br>John Pollen</Heading>
+  <Heading as="h1" className="heroText" size="2xl" lineHeight="normal" left={['28px', '50px', '80px', '100px']}>Las mejores noches de Cuba,<br></br>Vívelo en:<br></br><span style={{lineHeight: '50px'}} id="events">Warapo</span></Heading>
   <MyCarousel/>
   <MyEvents/>
   <MyTopFive/>

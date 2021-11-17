@@ -11,13 +11,14 @@ import {
     Text
   } from "@chakra-ui/react"
   
-import header1 from '/src/images/header1.jpg'
+import nov_19 from '/src/images/nov_19.jpg'
 
 function Feature({title, img, icon, alt, desc, link, ...rest}){
     return(
     
     <Box
-    p={4}
+    
+    
     className="feature-card"
     shadow="2xl"
     border="1px"
@@ -36,22 +37,22 @@ function Feature({title, img, icon, alt, desc, link, ...rest}){
         <Image 
         src={img}
         alt={alt}
-        borderRadius="md"
         objectFit="cover"
-        boxSize="225px"
+        boxSize="260px"
         ></Image>
-        <Heading fontSize="xl" as="h3" mt={2}>{title}</Heading>
-        <Text mt={4} mb={4}>{desc}</Text>
-        <Link href={link}
+        <Heading fontSize="xl" as="h3" mt={2} p={4}>{title}</Heading>
+        <Text  mb={4}  pl={4} pr={4}>{desc}</Text>
+        <Link  pl={4}   href={link}
             >
           
-                <Button  
+                <Button
+                mb={2}
                 size='md' 
                 variant="solid"  
                 borderColor="black"
                 borderWidth="1px"
                 color="#00ABC4"
-                w="125px"
+                w="150px"
                 letterSpacing={['normal', 'wider' ,'widest']}
 
                 _hover={{
@@ -80,15 +81,14 @@ function MyEvents(){
     mb={8}
     >
        <Feature
-       title="La guarida"
-       img={header1}
+       title="La Guarida"
+       img={nov_19}
        alt="La Guarida"
-       desc="Miercoles de guarida para que vivas otra ruta de los atardeceres"
+       desc="Ahora viernes de guarida para que vivas otra ruta de los atardeceres"
        link="#"
        
-       secret="comentan que somos las mejores fiestas de la Habana"
-       ></Feature> 
-       <Feature
+        ></Feature> 
+     {/*  <Feature
        title="La guarida"
        img={header1}
        alt="La Guarida"
@@ -103,7 +103,7 @@ function MyEvents(){
        desc="Miercoles de guarida para que vivas otra ruta de los atardeceres"
        link="#"
       
-       ></Feature> 
+     ></Feature> */}
       
     </Stack>
 </>
