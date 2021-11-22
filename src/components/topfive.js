@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Text, Image, Stack } from '@chakra-ui/layout'
+import { Box, Heading, HStack, Text, Stack } from '@chakra-ui/layout'
 import React from 'react'
 import './styles.sass'
 import Melatonina from '/src/images/melatonina.jpg'
@@ -8,7 +8,27 @@ import Andy from '/src/images/andy.png'
 import Alex from '/src/images/alex.png'
 import Lemuell from '/src/images/lemuell.png'
 import Liam from '/src/images/liam.png'
+import Andy_modal from '/src/images/andy-modal.jpg'
+import Alex_modal from '/src/images/alex-modal.jpg'
+import Lemuell_modal from '/src/images/lemuell-modal.jpg'
+import Liam_modal from '/src/images/liam-modal.jpg'
 
+import instagram from './../images/instagram-black.svg'
+import youtube from './../images/youtube-black.svg'
+import spotify from './../images/spotify-black.svg'
+import { useDisclosure } from '@chakra-ui/hooks'
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    Button,
+    Image,
+    Link
+  } from "@chakra-ui/react"
 
 
 
@@ -39,21 +59,34 @@ function MyTopFive(){
         <TopArtists
         img={Andy}
         name='Andy Isassi'
+        img_modal={Andy_modal}
+        ig='https://www.instagram.com/andyisasii/'
+        yt='https://www.youtube.com/c/AndyIsasi'
         >
         </TopArtists>
         <TopArtists
         img={Liam}
         name='Liam'
+        img_modal={Liam_modal}
+        ig='https://www.instagram.com/soy_liam/'
+        yt='https://www.youtube.com/channel/UCEf0aWxNGZ_KVqONxyjEpMg'
+        sfy='https://open.spotify.com/artist/4JLHYM2zhp7TsF2wlz99op?si=Ccoh7MIPTUek0WrjYi_jyg'
         >
         </TopArtists>
         <TopArtists
         img={Lemuell}
         name='Lemuell'
+        img_modal={Lemuell_modal}
+        ig='https://www.instagram.com/lemuellmusic/'
+        yt='https://www.youtube.com/channel/UC5MM-pVjwLcLE9oP5dc86TA'
         >
         </TopArtists>
         <TopArtists
         img={Alex}
         name='Alex Duvall'
+        img_modal={Alex_modal}
+        ig='https://www.instagram.com/alexduvallofficial/'
+        yt='https://www.youtube.com/channel/UCSiwhexEPcokA1CSHnkfMbA/featured'
         >
         </TopArtists>
       
@@ -81,8 +114,9 @@ function MyTopFive(){
    
     </>)
 }
- function TopArtists ({img, name}){
-    return(
+ function TopArtists ({img, name , ig, yt, sfy, text , img_modal}){
+     const {isOpen, onOpen, onClose} = useDisclosure()
+    return(<>
         <HStack flexDirection="column"
         wrap="wrap"
         
@@ -90,7 +124,8 @@ function MyTopFive(){
             color: '#00ABC4',
             transition: '1s'
         }} >
-            <Box  
+            <Box
+            onClick={onOpen}  
             borderRadius="full" borderWidth="4px" borderColor="white"
             backgroundImage={img} backgroundSize="cover" 
             boxShadow="dark-lg" 
@@ -114,8 +149,27 @@ function MyTopFive(){
             
             
         </HStack>
-      
-    )
+        <Modal isOpen={isOpen} onClose={onClose} size='xs'>
+            <ModalOverlay/>
+            <ModalContent>
+                <ModalHeader style={{color: 'black' , fontSize: '1.5rem'}} textAlign="center">{name}</ModalHeader>
+                <ModalCloseButton/>
+                <ModalBody display="flex" justifyContent='center'  gridGap={10}>
+                   
+                    <Image src={img_modal} width='52' boxShadow='dark-lg' borderRadius="lg"></Image>
+
+                   
+                   
+                </ModalBody>
+                <ModalFooter gridGap={8} mt={2} display='flex' justifyContent='center' >
+                        <Link href={ig}><Image src={instagram}></Image></Link>
+                        <Link href={yt}><Image  src={youtube}></Image></Link>
+                        <Link hre={sfy}><Image src={spotify}></Image></Link>
+                </ModalFooter>
+            </ModalContent>
+
+        </Modal>
+    </>)
 
 }
 
@@ -134,8 +188,8 @@ function ChartMusic({nameA, nameS, N, cover}){
           
             <Heading as="h5" mb="0px" w="20%" h="full"  display="flex" alignItems="center" justifyContent="center" size="2xl">{N}</Heading>       
             <Box w="50%" h="full"  display="flex" flexDirection="column" > 
-            <Heading as="h4" mb="0px"  size="sm" mt="4">{nameA}</Heading>
-            <Text color="gray.500"fontSize="smaller" mt="1">{nameS}</Text>
+            <Heading as="h4" mb="0px"  size="sm" mt="4">{nameS}</Heading>
+            <Text color="gray.500"fontSize="smaller" mt="1">{nameA}</Text>
             </Box>
            
             <Box w="30%" h="full" bgImage={cover} marginLeft="-2" bgSize="cover"></Box>
