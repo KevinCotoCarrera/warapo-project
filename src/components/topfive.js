@@ -151,17 +151,17 @@ function MyTopFive(){
         </HStack>
         <Modal isOpen={isOpen} onClose={onClose} size='xs'>
             <ModalOverlay/>
-            <ModalContent>
+            <ModalContent display='flex' flexDirection='column' alignItems='center'>
                 <ModalHeader style={{color: 'black' , fontSize: '1.5rem'}} textAlign="center">{name}</ModalHeader>
                 <ModalCloseButton/>
                 <ModalBody display="flex" justifyContent='center'  gridGap={10}>
                    
-                    <Image src={img_modal} width='52' maxHeight='80' boxShadow='dark-lg' borderRadius="lg"></Image>
+                    <Image src={img_modal} width='52' maxHeight='60' boxShadow='dark-lg' borderRadius="lg"></Image>
 
                    
                    
                 </ModalBody>
-                <ModalFooter gridGap={8} mt={2} display='flex' justifyContent='center' >
+                <ModalFooter mt={2} display='flex' justifyContent='space-evenly' width='52' >
                         <Link href={ig}><Image src={instagram}></Image></Link>
                         <Link href={yt}><Image  src={youtube}></Image></Link>
                         <Link hre={sfy}><Image src={spotify}></Image></Link>
