@@ -156,7 +156,7 @@ function MyTopFive(){
                 <ModalCloseButton/>
                 <ModalBody display="flex" justifyContent='center'  gridGap={10}>
                    
-                    <Image src={img_modal} width='52' boxShadow='dark-lg' borderRadius="lg"></Image>
+                    <Image src={img_modal} width='52' maxHeight='80' boxShadow='dark-lg' borderRadius="lg"></Image>
 
                    
                    
