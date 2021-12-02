@@ -161,7 +161,7 @@ function MyTopFive(){
                    
                    
                 </ModalBody>
-                <ModalFooter mt={2} display='flex' justifyContent='space-evenly' width='52' >
+                <ModalFooter mt={2} display='flex' justifyContent='space-around' width='60' >
                         <Link href={ig}><Image src={instagram}></Image></Link>
                         <Link href={yt}><Image  src={youtube}></Image></Link>
                         <Link hre={sfy}><Image src={spotify}></Image></Link>

@@ -11,7 +11,7 @@ import {
     Text
   } from "@chakra-ui/react"
   
-import nov_19 from '/src/images/nov_19.jpg'
+import dec_4 from '/src/images/dec_4.jpg'
 
 function Feature({title, img, icon, alt, desc, link, ...rest}){
     return(
@@ -81,10 +81,10 @@ function MyEvents(){
     mb={8}
     >
        <Feature
-       title="La Guarida"
-       img={nov_19}
-       alt="La Guarida"
-       desc="Ahora viernes de guarida para que vivas otra ruta de los atardeceres"
+       title="La Foresta"
+       img={dec_4}
+       alt="La Foresta"
+       desc="Premio al mejor Angel y Demonio."
        link="#"
        
         ></Feature> 
