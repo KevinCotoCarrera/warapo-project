@@ -37,8 +37,9 @@ function Feature({title, img, icon, alt, desc, link, ...rest}){
         <Image 
         src={img}
         alt={alt}
-        objectFit="cover"
-        boxSize="260px"
+        objectFit="fill"
+        boxSize="300"
+        borderTopRadius="md"
         ></Image>
         <Heading fontSize="xl" as="h3" mt={2} p={4}>{title}</Heading>
         <Text  mb={4}  pl={4} pr={4}>{desc}</Text>
@@ -84,7 +85,7 @@ function MyEvents(){
        title="La Foresta"
        img={dec_4}
        alt="La Foresta"
-       desc="Premio al mejor Angel y Demonio."
+       desc="Premio al mejor Ángel y Demonio."
        link="#"
        
         ></Feature> 
